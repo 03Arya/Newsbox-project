@@ -8,6 +8,10 @@ module.exports = {
 	mode: "production",
 	plugins: [new MiniCssExtractPlugin(), new HtmlWebpackPlugin({
 		template: path.resolve(__dirname, "src", "index.html")
+	}),
+	new HtmlWebpackPlugin({
+		template: path.resolve(__dirname, "src", "settings.html"),
+		filename :"settings.html"
 	})],
 	module: {
 		rules: [
@@ -15,7 +19,7 @@ module.exports = {
 				test: /\.(s[ac]|c)ss$/i,
 				//test: path.resolve(__dirname, "src/scss/*"),
 				use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader", "postcss-loader"]
-			},{
+			}, {
 				test: /\.(png|jpe?g)$/i,
 				type: "asset",
 				use: [
@@ -38,9 +42,9 @@ module.exports = {
 					options: {
 						encodeOptions: {
 							jpeg: {
-                // https://sharp.pixelplumbing.com/api-output#jpeg
-                quality: 20,
-              },
+								// https://sharp.pixelplumbing.com/api-output#jpeg
+								quality: 20,
+							},
 							png: {
 								quality: 20,
 								compressionLevel: 9

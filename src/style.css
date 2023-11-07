@@ -1,0 +1,75 @@
+header {
+  border-bottom: #c8d1d3 1px solid;
+  display: grid;
+  row-gap: 1em;
+}
+
+nav {
+  border-bottom: 1px #c8d1d3 solid;
+}
+
+li {
+  font-family: europa, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  color: #324755;
+  list-style: none;
+  font-size: 18px;
+}
+
+a {
+  color: #324755;
+  text-decoration: none;
+}
+
+.homeButton {
+  font-weight: 700;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+  column-gap: 7em;
+  padding: 0;
+}
+
+form {
+  display: grid;
+  margin: auto;
+  width: 250px;
+  height: 50px;
+  background-color: #f0f3f4;
+  border-radius: 5px;
+  border: 1px solid #f0f3f4;
+  padding: 0 1em;
+  margin-bottom: 1em;
+}
+
+input,
+button {
+  outline: none;
+  border: 0px solid;
+  background-color: #f0f3f4;
+  color: #324755;
+}
+
+label {
+  margin: auto;
+  width: 300px;
+}
+
+button {
+  margin-left: 5em;
+}
+
+body {
+  max-width: 450px;
+  margin: auto;
+  padding: 0 1em;
+}
+
+.settingsSection {
+  background-color: #c8d1d3;
+  height: 400px;
+}/*# sourceMappingURL=style.css.map */
