@@ -60,9 +60,9 @@ $Sand: #B9B0A2;
         font-weight: 700;
         font-size: 15px;
         margin-top: 1em;
-        width: 20%;
         padding-top: 1em;
         margin-left: 2em;
+        max-width: 100px;
     }
 
     div {
@@ -70,13 +70,14 @@ $Sand: #B9B0A2;
         display: grid;
         border-bottom: 1px solid $Fossil;
         display: grid;
+        grid-template-columns: repeat(2, auto);
+        column-gap: 10em;
     }
 
     .noBorder {
         border: 0;
     }
-    
+
+
+
 }
-
-
-

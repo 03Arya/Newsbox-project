@@ -1,3 +1,7 @@
+$Sage: #87BCBF;
+$Ice: #f0f3f4;
+
+
 .switch {
 	position: relative;
 	display: block;
@@ -6,6 +10,7 @@
 	background-color: lightgrey;
 	border-radius: 1em;
 	transition: background-color 500ms ease;
+	margin-top: 1.5em;
 
 	&:after {
 		content: "";
@@ -15,7 +20,7 @@
 		height: 1.7em;
 		width: 1.7em;
 		border-radius: 50%;
-		background-color: hsl(0, 0%, 58%);
+		background-color: white;
 		transition: left 500ms ease, background-color 500ms ease;
 	}
 }
@@ -26,9 +31,9 @@
 
 .switch__checkbox:checked+.switch:after {
 	left: calc(97% - 1.7em);
-	background-color: lightgrey;
+	background-color: white;
 }
 
 .switch__checkbox:checked+.switch {
-	background-color: hsl(0, 1%, 15%);
+	background-color: $Sage;
 }
