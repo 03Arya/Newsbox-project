@@ -1,0 +1,32 @@
+$Drab: #324755;
+$Fossil: #c8d1d3;
+$Ice: #f0f3f4;
+$Onyx: #1B1C20;
+
+.searchForm {
+    display: grid;
+    margin: auto;
+    width: 300px;
+    height: 50px;
+    background-color: $Ice;
+    border-radius: 5px;
+    border: 1px solid $Ice;
+    padding: 0 1em;
+    margin-bottom: 1em;
+    label {
+        margin: auto;
+        width: 300px;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+    }
+    button {
+
+    }
+    .searchInput, button {
+        outline: none;
+        border: 0px solid;
+        background-color: $Ice;
+        color: $Onyx;
+    }
+}
+

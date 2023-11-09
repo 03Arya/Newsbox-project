@@ -1,68 +1,43 @@
 $Drab: #324755;
 $Fossil: #c8d1d3;
 $Ice: #f0f3f4;
+$Onyx: #1B1C20;
 
 header {
     border-bottom: $Fossil 1px solid;
-    display: grid; 
+    display: grid;
     row-gap: 1em;
-}
 
-nav {
-    border-bottom: 1px $Fossil solid;
+    nav {
+        border-bottom: 1px $Fossil solid;
+        max-width: 100vw;
+        padding-bottom: 1em;
+    }
 
-}
+    li {
+        font-family: europa, sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        color: $Drab;
+        list-style: none;
+        font-size: 18px;
+    }
 
-li {
-    font-family: europa, sans-serif;
-    font-style: normal;
-    font-weight: 300;
-    color: $Drab;
-    list-style: none;
-    font-size: 18px;
-}
+    a {
+        color: $Onyx;
+        text-decoration: none;
+    }
 
-a {
-    color: $Drab;
-    text-decoration: none;
-}
+    .homeButton {
+        font-weight: 700;
+    }
 
-.homeButton {
-    font-weight: 700;
-}
+    ul {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        justify-content: center;
+        column-gap: 7em;
+        padding: 0;
+    }
 
-ul {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    justify-content: center;
-    column-gap: 7em;
-    padding: 0;
-}
-
-form {
-    display: grid;
-    margin: auto;
-    width: 250px;
-    height: 50px;
-    background-color: $Ice;
-    border-radius: 5px;
-    border: 1px solid $Ice;
-    padding: 0 1em;
-    margin-bottom: 1em;
-}
-
-input,
-button {
-    outline: none;
-    border: 0px solid;
-    background-color: $Ice;
-    color: $Drab;
-}
-label {
-    margin: auto;
-    width: 300px;
-}
-
-button {
-    margin-left: 5em;
 }
