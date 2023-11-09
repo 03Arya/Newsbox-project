@@ -6,9 +6,13 @@ $Sage: #87BCBF;
 $Sand: #B9B0A2;
 
 
-.settingsSection {
+.settingsMain {
     background-color: $Ice;
     height: 100vh;
+}
+
+.settingsSection {
+
     padding-top: 3em;
 }
 
@@ -32,3 +36,47 @@ $Sand: #B9B0A2;
         font-weight: 700;
     }
 }
+
+.line {
+    margin: auto;
+    margin-top: 1em;
+    display: block;
+    height: 2px;
+    width: 30px;
+    background-color: white;
+}
+
+.settingsFilters {
+    background-color: white;
+    max-width: 430px;
+    margin: 0 1em;
+    margin-top: 5em;
+    border-radius: 15px;
+    border: 1px solid white;
+
+    p {
+        font-family: europa, sans-serif;
+        color: $Onyx;
+        font-weight: 700;
+        font-size: 15px;
+        margin-top: 1em;
+        width: 20%;
+        padding-top: 1em;
+        margin-left: 2em;
+    }
+
+    div {
+        height: 75px;
+        display: grid;
+        border-bottom: 1px solid $Fossil;
+        display: grid;
+    }
+
+    .noBorder {
+        border: 0;
+    }
+    
+}
+
+
+
