@@ -1,0 +1,42 @@
+$Drab: #324755;
+$Fossil: #c8d1d3;
+$Ice: #f0f3f4;
+$Onyx: #1B1C20;
+$Sage: #87BCBF;
+$Sand: #B9B0A2;
+
+
+
+.newsNav {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background-image: linear-gradient(to right, rgb(249, 249, 249) , white);
+    border-bottom: $Fossil 1px solid;
+    border-top: $Fossil 1px solid;
+
+    .newsNavDiv {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .newsTitle {
+        font-family: europa, sans-serif;
+        color: $Onyx;
+        font-weight: 700;
+    }
+    .newsDropdownArrow {
+        display: grid;
+        justify-content: end;
+        padding-right: 2em;
+    }
+
+    .newsShape {
+        color: orange;
+        width: 30px;
+        display: grid;
+        justify-content: center;
+        background-color: white;
+        border-radius: 50%;
+        height: 30px;
+        margin-left: 1em;
+    }
+}

@@ -1,18 +1,15 @@
 $Drab: #324755;
 $Fossil: #c8d1d3;
 $Ice: #f0f3f4;
-$Onyx: #1B1C20;
-$Sage: #87BCBF;
-$Sand: #B9B0A2;
-
+$Onyx: #1b1c20;
+$Sage: #87bcbf;
+$Sand: #b9b0a2;
 
 .settingsMain {
     background-color: $Ice;
-    height: 100vh;
 }
 
 .settingsSection {
-
     padding-top: 3em;
 }
 
@@ -77,7 +74,20 @@ $Sand: #B9B0A2;
     .noBorder {
         border: 0;
     }
+}
 
-
-
+.settingsFooter {
+    display: grid;
+    padding: 1em 0;
+    justify-content: center;
+    .darkmodeButton button {
+        background-color: $Ice;
+        border: 1px solid black;
+        border-radius: 25px;
+        padding: 1em 2em;
+    }
+    .version {
+        font-size: 13px;
+        padding-left: 2em;
+    }
 }
