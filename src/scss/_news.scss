@@ -1,16 +1,15 @@
 $Drab: #324755;
 $Fossil: #c8d1d3;
 $Ice: #f0f3f4;
-$Onyx: #1B1C20;
-$Sage: #87BCBF;
-$Sand: #B9B0A2;
-
-
+$Onyx: #1b1c20;
+$Sage: #87bcbf;
+$Sand: #b9b0a2;
+$Slate: #6e8ca0;
 
 .newsNav {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    background-image: linear-gradient(to right, rgb(249, 249, 249) , white);
+    background-image: linear-gradient(to right, rgb(249, 249, 249), white);
     border-bottom: $Fossil 1px solid;
     border-top: $Fossil 1px solid;
 
@@ -26,17 +25,61 @@ $Sand: #B9B0A2;
     .newsDropdownArrow {
         display: grid;
         justify-content: end;
-        padding-right: 2em;
+    }
+    .newsDropdownArrow svg {
+        width: 50px;
+        cursor: pointer;
+        height: 25px;
     }
 
-    .newsShape {
-        color: orange;
+    .newsNavLogo {
         width: 30px;
         display: grid;
         justify-content: center;
-        background-color: white;
-        border-radius: 50%;
         height: 30px;
         margin-left: 1em;
+        margin-top: 0.5em;
+    }
+}
+
+.newsArticle {
+    max-width: 450px;
+    height: 100%;
+    display: grid;
+    animation: transition 1.25s;
+    border-bottom: $Fossil 1px solid;
+    border-top: $Fossil 1px solid;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 2em;
+    font-family: rift-soft, sans-serif;
+    padding: 1em 0;
+
+    img {
+        width: 100px;
+        background-color: white;
+        border-radius: 50%;
+    }
+
+    .newsArticleHeading {
+        font-weight: 700;
+        color: $Onyx;
+    }
+
+    .newsArticleText {
+        color: $Slate;
+        font-size: 13px;
+        line-height: 20px;
+    }
+}
+
+@keyframes transition {
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0);
     }
 }

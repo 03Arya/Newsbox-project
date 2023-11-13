@@ -113,6 +113,7 @@ body {
   border: 1px solid black;
   border-radius: 25px;
   padding: 1em 2em;
+  font-family: rift-soft, sans-serif;
 }
 .settingsFooter .version {
   font-size: 13px;
@@ -167,6 +168,8 @@ body {
 
 .switch__checkbox {
   display: none;
+  max-width: 85px;
+  width: 85px;
 }
 
 .switch__checkbox:checked + .switch:after {
@@ -191,21 +194,61 @@ body {
 }
 .newsNav .newsTitle {
   font-family: europa, sans-serif;
-  color: #1B1C20;
+  color: #1b1c20;
   font-weight: 700;
 }
 .newsNav .newsDropdownArrow {
   display: grid;
   justify-content: end;
-  padding-right: 2em;
 }
-.newsNav .newsShape {
-  color: orange;
+.newsNav .newsDropdownArrow svg {
+  width: 50px;
+  cursor: pointer;
+  height: 25px;
+}
+.newsNav .newsNavLogo {
   width: 30px;
   display: grid;
   justify-content: center;
-  background-color: white;
-  border-radius: 50%;
   height: 30px;
   margin-left: 1em;
+  margin-top: 0.5em;
+}
+
+.newsArticle {
+  max-width: 450px;
+  height: 100%;
+  display: grid;
+  animation: transition 1.25s;
+  border-bottom: #c8d1d3 1px solid;
+  border-top: #c8d1d3 1px solid;
+  grid-template-columns: repeat(2, auto);
+  column-gap: 2em;
+  font-family: rift-soft, sans-serif;
+  padding: 1em 0;
+}
+.newsArticle img {
+  width: 100px;
+  background-color: white;
+  border-radius: 50%;
+}
+.newsArticle .newsArticleHeading {
+  font-weight: 700;
+  color: #1b1c20;
+}
+.newsArticle .newsArticleText {
+  color: #6e8ca0;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+@keyframes transition {
+  from {
+    opacity: 0;
+    transform: rotateX(-10deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotateX(0);
+  }
 }/*# sourceMappingURL=style.css.map */

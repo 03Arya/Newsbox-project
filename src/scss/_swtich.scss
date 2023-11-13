@@ -27,6 +27,8 @@ $Ice: #f0f3f4;
 
 .switch__checkbox {
 	display: none;
+	max-width: 85px;
+	width: 85px;
 }
 
 .switch__checkbox:checked+.switch:after {
