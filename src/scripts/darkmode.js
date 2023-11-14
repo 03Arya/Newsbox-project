@@ -6,7 +6,7 @@ export default (function() {
 		localStorage.setItem("theme", "darkmode")
 	}
 
-	const CTA_BUTTON = document.querySelector(".switch_darkmode")
+	const CTA_BUTTON = document.querySelector(".darkmodeSwitch")
 	CTA_BUTTON.addEventListener("click", clickHandler)
 
 	function clickHandler() {
@@ -23,7 +23,7 @@ export default (function() {
 	}
 
 	if (localStorage.getItem("theme") === "darkmode") {
-		CTA_BUTTON.checked = true
+		CTA_BUTTON.clickHandler = true
 	}
 
 	document.body.classList.add(localStorage.getItem("theme"))

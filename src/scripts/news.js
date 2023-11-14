@@ -5,23 +5,19 @@ export default (function () {
   DROPDOWN.addEventListener("click", clickHandler);
 
 
-  function clickHandler() {
-    var x = document.querySelector(".newsArticle");
-    var arrow = document.getElementById("dropDown");
+  function clickHandler(id) {
+    var ARTICLE = document.querySelector(".newsArticle");
 
     // Toggle visibility of the article
-    x.classList.toggle("hidden");
+    ARTICLE.classList.toggle("hidden");
 
     // Toggle arrow icon based on the visibility of .newsArticle
-    if (x.classList.contains("hidden")) {
-      arrow.classList.remove("fa-chevron-down");
-      arrow.classList.add("fa-chevron-right");
+    if (ARTICLE.classList.contains("hidden")) {
+      DROPDOWN.classList.remove("fa-chevron-down");
+      DROPDOWN.classList.add("fa-chevron-right");
     } else {
-      arrow.classList.remove("fa-chevron-right");
-      arrow.classList.add("fa-chevron-down");
-    }
+      DROPDOWN.classList.remove("fa-chevron-right");
+      DROPDOWN.classList.add("fa-chevron-down");
+    } 
   }
-
-
-
 })();

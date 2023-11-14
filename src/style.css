@@ -96,7 +96,7 @@ body {
   display: grid;
   border-bottom: 1px solid #c8d1d3;
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: 2fr 1fr;
   column-gap: 10em;
 }
 .settingsFilters .noBorder {
@@ -105,8 +105,10 @@ body {
 
 .settingsFooter {
   display: grid;
+  margin-top: 5em;
   padding: 1em 0;
   justify-content: center;
+  row-gap: 2em;
 }
 .settingsFooter .darkmodeButton button {
   background-color: #f0f3f4;
@@ -196,15 +198,19 @@ body {
   font-family: europa, sans-serif;
   color: #1b1c20;
   font-weight: 700;
+  text-align: center;
 }
 .newsNav .newsDropdownArrow {
   display: grid;
-  justify-content: end;
+  justify-content: center;
+  border: none;
 }
 .newsNav .newsDropdownArrow svg {
   width: 50px;
   cursor: pointer;
   height: 25px;
+  align-self: center;
+  margin-left: 10em;
 }
 .newsNav .newsNavLogo {
   width: 30px;
@@ -213,6 +219,7 @@ body {
   height: 30px;
   margin-left: 1em;
   margin-top: 0.5em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .newsArticle {
@@ -225,21 +232,9 @@ body {
   grid-template-columns: repeat(2, auto);
   column-gap: 2em;
   font-family: rift-soft, sans-serif;
-  padding: 1em 0;
 }
-.newsArticle img {
-  width: 100px;
-  background-color: white;
-  border-radius: 50%;
-}
-.newsArticle .newsArticleHeading {
-  font-weight: 700;
-  color: #1b1c20;
-}
-.newsArticle .newsArticleText {
-  color: #6e8ca0;
-  font-size: 13px;
-  line-height: 20px;
+.newsArticle a {
+  text-decoration: none;
 }
 
 @keyframes transition {
@@ -251,4 +246,37 @@ body {
     opacity: 1;
     transform: rotateX(0);
   }
+}
+.hidden {
+  display: none;
+}
+
+.articleContainer {
+  border-bottom: #c8d1d3 1px solid;
+  border-top: #c8d1d3 1px solid;
+  padding: 0 1em;
+  width: 100%;
+  max-width: 450px;
+}
+.articleContainer .articleHeader {
+  text-decoration: none;
+  color: #1b1c20;
+  font-weight: 700;
+  font-family: europa, sans-serif;
+  font-size: 15px;
+}
+.articleContainer .articleText {
+  text-decoration: none;
+  color: #6e8ca0;
+  font-family: europa, sans-serif;
+  font-size: 14px;
+}
+
+.newsArticleText {
+  margin: 0;
+}
+
+body.darkmode {
+  --headerBackground: hsl(40, 67%, 48%);
+  --secondaryTextColor: black;
 }/*# sourceMappingURL=style.css.map */

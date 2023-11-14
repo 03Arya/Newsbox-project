@@ -1,5 +1,4 @@
 import "./style.scss"
-import "./scripts/fetch"
 import '@fortawesome/fontawesome-free/js/fontawesome'
 import '@fortawesome/fontawesome-free/js/solid'
 import '@fortawesome/fontawesome-free/js/regular'
@@ -9,3 +8,4 @@ import "./scripts/darkmode"
 import "./images/index.png"
 import "./scripts/news"
 import "./images/diamond.png"
+import "./scripts/fetch"

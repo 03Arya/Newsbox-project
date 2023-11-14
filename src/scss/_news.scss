@@ -12,7 +12,6 @@ $Slate: #6e8ca0;
     background-image: linear-gradient(to right, rgb(249, 249, 249), white);
     border-bottom: $Fossil 1px solid;
     border-top: $Fossil 1px solid;
-
     .newsNavDiv {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -21,17 +20,20 @@ $Slate: #6e8ca0;
         font-family: europa, sans-serif;
         color: $Onyx;
         font-weight: 700;
+        text-align: center;
     }
     .newsDropdownArrow {
         display: grid;
-        justify-content: end;
+        justify-content: center;
+        border: none;
     }
     .newsDropdownArrow svg {
         width: 50px;
         cursor: pointer;
         height: 25px;
+        align-self: center;
+        margin-left: 10em;
     }
-
     .newsNavLogo {
         width: 30px;
         display: grid;
@@ -39,6 +41,8 @@ $Slate: #6e8ca0;
         height: 30px;
         margin-left: 1em;
         margin-top: 0.5em;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
     }
 }
 
@@ -52,26 +56,10 @@ $Slate: #6e8ca0;
     grid-template-columns: repeat(2, auto);
     column-gap: 2em;
     font-family: rift-soft, sans-serif;
-    padding: 1em 0;
-
-    img {
-        width: 100px;
-        background-color: white;
-        border-radius: 50%;
-    }
-
-    .newsArticleHeading {
-        font-weight: 700;
-        color: $Onyx;
-    }
-
-    .newsArticleText {
-        color: $Slate;
-        font-size: 13px;
-        line-height: 20px;
+    a {
+        text-decoration: none;
     }
 }
-
 @keyframes transition {
     from {
         opacity: 0;
@@ -86,5 +74,29 @@ $Slate: #6e8ca0;
 
 .hidden {
     display: none;
-  }
-  
+}
+
+.articleContainer {
+    border-bottom: $Fossil 1px solid;
+    border-top: $Fossil 1px solid;
+    padding: 0 1em;
+    width: 100%;
+    max-width: 450px;
+    .articleHeader {
+        text-decoration: none;
+        color: $Onyx;
+        font-weight: 700;
+        font-family: europa, sans-serif;
+        font-size: 15px;
+    }
+    .articleText {
+        text-decoration: none;
+        color: $Slate;
+        font-family: europa, sans-serif;
+        font-size: 14px;
+    }
+}
+
+.newsArticleText {
+    margin: 0;
+}

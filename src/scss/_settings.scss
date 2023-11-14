@@ -67,7 +67,7 @@ $Sand: #b9b0a2;
         display: grid;
         border-bottom: 1px solid $Fossil;
         display: grid;
-        grid-template-columns: repeat(2, auto);
+        grid-template-columns: 2fr 1fr;
         column-gap: 10em;
     }
 
@@ -78,8 +78,10 @@ $Sand: #b9b0a2;
 
 .settingsFooter {
     display: grid;
+    margin-top: 5em;
     padding: 1em 0;
     justify-content: center;
+    row-gap: 2em;
     .darkmodeButton button {
         background-color: $Ice;
         border: 1px solid black;
