@@ -27,3 +27,4 @@ export default (function () {
     // Call the function to fetch articles
     fetchNYTHealthArticles();
 })();
+

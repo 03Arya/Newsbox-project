@@ -5,7 +5,7 @@ export default (function () {
   DROPDOWN.addEventListener("click", clickHandler);
 
 
-  function clickHandler(id) {
+  function clickHandler() {
     var ARTICLE = document.querySelector(".newsArticle");
 
     // Toggle visibility of the article
