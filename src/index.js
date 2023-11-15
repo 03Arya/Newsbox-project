@@ -10,7 +10,5 @@ import "./scripts/fontawsome"
 
 import "./scripts/darkmode"
 import "./scripts/switch"
-import "./scripts/fetchTravel"
-import "./scripts/fetchHealth"
-import "./scripts/fetchSport"
-import "./scripts/fetchBusiness"
+import "./scripts/fetch"
+
