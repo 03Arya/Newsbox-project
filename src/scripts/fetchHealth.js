@@ -7,7 +7,7 @@ export default (function () {
             const response = await fetch('https://api.nytimes.com/svc/topstories/v2/health.json?api-key=' + apiKey);
             const data = await response.json();
 
-            const articles = data.results.slice(1, 5);
+            const articles = data.results.slice(1, 6);
             const articleContent = articles.map(article => `
             <a href="${article.url}" target="_blank">
                     <div class="articleContainer">
@@ -17,14 +17,35 @@ export default (function () {
                     </a>
                 `).join('');
 
-            document.querySelector('.newsArticleText').innerHTML = articleContent;
+            document.querySelector('.newsArticleTextHealth').innerHTML = articleContent;
         } catch (error) {
             console.error('Error fetching articles:', error);
-            document.querySelector('.newsArticleText').innerText = 'Failed to fetch articles.';
+            document.querySelector('.newsArticleTextHealth').innerText = 'Failed to fetch articles.';
         }
+        
     }
 
     // Call the function to fetch articles
     fetchNYTHealthArticles();
+
+    const DROPDOWN = document.querySelector("#healthDropdown");
+    DROPDOWN.addEventListener("click", clickHandler);
+  
+  
+    function clickHandler() {
+      var ARTICLE = document.querySelector(".newsArticleHealth");
+  
+      // Toggle visibility of the article
+      ARTICLE.classList.toggle("hidden");
+  
+      // Toggle arrow icon based on the visibility of .newsArticle
+      if (ARTICLE.classList.contains("hidden")) {
+        DROPDOWN.classList.remove("fa-chevron-down");
+        DROPDOWN.classList.add("fa-chevron-right");
+      } else {
+        DROPDOWN.classList.remove("fa-chevron-right");
+        DROPDOWN.classList.add("fa-chevron-down");
+      } 
+    }
 })();
 

@@ -80,7 +80,6 @@ $Slate: #6e8ca0;
     border-bottom: $Fossil 1px solid;
     border-top: $Fossil 1px solid;
     padding: 0 1em;
-    width: 100%;
     max-width: 450px;
     .articleHeader {
         text-decoration: none;
@@ -99,4 +98,8 @@ $Slate: #6e8ca0;
 
 .newsArticleText {
     margin: 0;
+}
+
+section a {
+    text-decoration: none;
 }

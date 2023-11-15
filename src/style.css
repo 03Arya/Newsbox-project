@@ -255,7 +255,6 @@ body {
   border-bottom: #c8d1d3 1px solid;
   border-top: #c8d1d3 1px solid;
   padding: 0 1em;
-  width: 100%;
   max-width: 450px;
 }
 .articleContainer .articleHeader {
@@ -274,6 +273,10 @@ body {
 
 .newsArticleText {
   margin: 0;
+}
+
+section a {
+  text-decoration: none;
 }
 
 body.darkmode {

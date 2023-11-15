@@ -15,5 +15,6 @@ export default (function () {
         if (savedState) {
             checkbox.checked = savedState === "true"; // Convert string to boolean
         }
+        
     });
 })()
