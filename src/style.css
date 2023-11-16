@@ -111,6 +111,7 @@ header ul {
   border-radius: 25px;
   padding: 1em 2em;
   font-family: rift-soft, sans-serif;
+  cursor: pointer;
 }
 .settingsFooter .version {
   font-size: 13px;
@@ -150,6 +151,7 @@ header ul {
   border-radius: 1em;
   transition: background-color 500ms ease;
   margin-top: 1.5em;
+  cursor: pointer;
 }
 .switch:after {
   content: "";
@@ -222,11 +224,6 @@ header ul {
 body {
   max-width: 450px;
   margin: auto;
-}
-
-body.darkmode {
-  --headerBackground: hsl(40, 67%, 48%);
-  --secondaryTextColor: black;
 }
 
 .ArticleHealth,

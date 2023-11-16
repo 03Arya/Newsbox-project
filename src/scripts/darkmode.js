@@ -1,6 +1,5 @@
 export default (function () {
     if (!window.location.pathname.includes("settings.html")) return; // guard clause
-
     const CTA_BUTTON = document.querySelector(".darkmodeSwitch");
 
     if (!localStorage.getItem("theme")) {
@@ -25,10 +24,13 @@ export default (function () {
             "theme",
             CLASS_LIST.contains("darkmode") ? "darkmode" : ""
         );
+        
     }
 
     // Check if the theme is initially set to darkmode and simulate a click
     if (localStorage.getItem("theme") === "darkmode") {
         CTA_BUTTON.click();
     }
+    console.log(CTA_BUTTON)
+
 })();
