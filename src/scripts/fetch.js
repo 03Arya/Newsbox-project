@@ -27,16 +27,16 @@ export default (function () {
   }
 
   // Fetch articles for Business
-  fetchArticles('business', '.newsArticleTextBusiness', '#businessDropdown', 'newsArticleBusiness');
+  fetchArticles('business', '.ArticleTextBusiness', '#businessDropdown', 'ArticleBusiness');
 
   // Fetch articles for Health
-  fetchArticles('health', '.newsArticleTextHealth', '#healthDropdown', 'newsArticleHealth');
+  fetchArticles('health', '.ArticleTextHealth', '#healthDropdown', 'ArticleHealth');
 
   // Fetch articles for Sports
-  fetchArticles('sports', '.newsArticleTextSport', '#sportDropdown', 'newsArticleSport');
+  fetchArticles('sports', '.ArticleTextSport', '#sportDropdown', 'ArticleSport');
 
   // Fetch articles for Travel
-  fetchArticles('travel', '.newsArticleTextTravel', '#travelDropdown', 'newsArticleTravel');
+  fetchArticles('travel', '.ArticleTextTravel', '#travelDropdown', 'ArticleTravel');
 
   function clickHandler(dropdownSelector, articleClass) {
     const DROPDOWN = document.querySelector(dropdownSelector);
@@ -57,8 +57,8 @@ export default (function () {
 
 
   // Add click event listeners for each dropdown
-  document.querySelector('#businessDropdown').addEventListener("click", () => clickHandler('#businessDropdown', 'newsArticleBusiness'));
-  document.querySelector('#healthDropdown').addEventListener("click", () => clickHandler('#healthDropdown', 'newsArticleHealth'));
-  document.querySelector('#sportDropdown').addEventListener("click", () => clickHandler('#sportDropdown', 'newsArticleSport'));
-  document.querySelector('#travelDropdown').addEventListener("click", () => clickHandler('#travelDropdown', 'newsArticleTravel'));
+  document.querySelector('#businessDropdown').addEventListener("click", () => clickHandler('#businessDropdown', 'ArticleBusiness'));
+  document.querySelector('#healthDropdown').addEventListener("click", () => clickHandler('#healthDropdown', 'ArticleHealth'));
+  document.querySelector('#sportDropdown').addEventListener("click", () => clickHandler('#sportDropdown', 'ArticleSport'));
+  document.querySelector('#travelDropdown').addEventListener("click", () => clickHandler('#travelDropdown', 'ArticleTravel'));
 })();

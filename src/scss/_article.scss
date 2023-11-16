@@ -1,0 +1,69 @@
+$Drab: #324755;
+$Fossil: #c8d1d3;
+$Ice: #f0f3f4;
+$Onyx: #1b1c20;
+$Sage: #87bcbf;
+$Sand: #b9b0a2;
+$Slate: #6e8ca0;
+
+.ArticleHealth,
+.ArticleSport,
+.ArticleTravel,
+.ArticleEurope,
+.ArticleBusiness {
+    animation: transition 1.25s;
+    font-family: rift-soft, sans-serif;
+}
+
+.ArticleTextHealth,
+.ArticleTextSport,
+.ArticleTextTravel,
+.ArticleTextEurope,
+.ArticleTextBusiness,
+p {
+    margin: 0;
+}
+@keyframes transition {
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.articleContainer {
+    border-bottom: $Fossil 1px solid;
+    border-top: $Fossil 1px solid;
+    padding: 0 1em;
+    max-width: 450px;
+    padding-bottom: 1em;
+    .articleHeader {
+        text-decoration: none;
+        color: $Onyx;
+        font-weight: 700;
+        font-family: europa, sans-serif;
+        font-size: 15px;
+    }
+    .articleText {
+        text-decoration: none;
+        color: $Slate;
+        font-family: europa, sans-serif;
+        font-size: 14px;
+    }
+}
+
+.ArticleText {
+    margin: 0;
+}
+
+section a {
+    text-decoration: none;
+}

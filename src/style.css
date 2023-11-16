@@ -31,11 +31,6 @@ header ul {
   padding: 0;
 }
 
-body {
-  max-width: 450px;
-  margin: auto;
-}
-
 .settingsMain {
   background-color: #f0f3f4;
 }
@@ -189,6 +184,7 @@ body {
   background-image: linear-gradient(to right, rgb(249, 249, 249), white);
   border-bottom: #c8d1d3 1px solid;
   border-top: #c8d1d3 1px solid;
+  height: 58px;
 }
 .newsNav .newsNavDiv {
   display: grid;
@@ -199,6 +195,7 @@ body {
   color: #1b1c20;
   font-weight: 700;
   text-align: center;
+  margin-top: 1.25em;
 }
 .newsNav .newsDropdownArrow {
   display: grid;
@@ -218,23 +215,36 @@ body {
   justify-content: center;
   height: 30px;
   margin-left: 1em;
-  margin-top: 0.5em;
+  margin-top: 0.75em;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.newsArticle {
+body {
   max-width: 450px;
-  height: 100%;
-  display: grid;
+  margin: auto;
+}
+
+body.darkmode {
+  --headerBackground: hsl(40, 67%, 48%);
+  --secondaryTextColor: black;
+}
+
+.ArticleHealth,
+.ArticleSport,
+.ArticleTravel,
+.ArticleEurope,
+.ArticleBusiness {
   animation: transition 1.25s;
-  border-bottom: #c8d1d3 1px solid;
-  border-top: #c8d1d3 1px solid;
-  grid-template-columns: repeat(2, auto);
-  column-gap: 2em;
   font-family: rift-soft, sans-serif;
 }
-.newsArticle a {
-  text-decoration: none;
+
+.ArticleTextHealth,
+.ArticleTextSport,
+.ArticleTextTravel,
+.ArticleTextEurope,
+.ArticleTextBusiness,
+p {
+  margin: 0;
 }
 
 @keyframes transition {
@@ -256,6 +266,7 @@ body {
   border-top: #c8d1d3 1px solid;
   padding: 0 1em;
   max-width: 450px;
+  padding-bottom: 1em;
 }
 .articleContainer .articleHeader {
   text-decoration: none;
@@ -271,15 +282,10 @@ body {
   font-size: 14px;
 }
 
-.newsArticleText {
+.ArticleText {
   margin: 0;
 }
 
 section a {
   text-decoration: none;
-}
-
-body.darkmode {
-  --headerBackground: hsl(40, 67%, 48%);
-  --secondaryTextColor: black;
 }/*# sourceMappingURL=style.css.map */

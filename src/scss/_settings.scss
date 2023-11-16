@@ -26,7 +26,6 @@ $Sand: #b9b0a2;
     font-size: 20px;
     font-weight: 400;
     color: $Sand;
-
     span {
         color: $Sage;
         font-size: 35px;
@@ -50,7 +49,6 @@ $Sand: #b9b0a2;
     margin-top: 5em;
     border-radius: 15px;
     border: 1px solid white;
-
     p {
         font-family: europa, sans-serif;
         color: $Onyx;
@@ -61,7 +59,6 @@ $Sand: #b9b0a2;
         margin-left: 2em;
         max-width: 100px;
     }
-
     div {
         height: 75px;
         display: grid;
@@ -70,7 +67,6 @@ $Sand: #b9b0a2;
         grid-template-columns: 2fr 1fr;
         column-gap: 10em;
     }
-
     .noBorder {
         border: 0;
     }

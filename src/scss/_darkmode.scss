@@ -1,3 +1,8 @@
+body {
+    max-width: 450px;
+    margin: auto;
+}
+
 body.darkmode {
 	--headerBackground: hsl(40, 67%, 48%);
 	--secondaryTextColor: black;

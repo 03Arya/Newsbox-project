@@ -12,6 +12,7 @@ $Slate: #6e8ca0;
     background-image: linear-gradient(to right, rgb(249, 249, 249), white);
     border-bottom: $Fossil 1px solid;
     border-top: $Fossil 1px solid;
+    height: 58px;
     .newsNavDiv {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -21,6 +22,7 @@ $Slate: #6e8ca0;
         color: $Onyx;
         font-weight: 700;
         text-align: center;
+        margin-top: 1.25em;
     }
     .newsDropdownArrow {
         display: grid;
@@ -40,66 +42,9 @@ $Slate: #6e8ca0;
         justify-content: center;
         height: 30px;
         margin-left: 1em;
-        margin-top: 0.5em;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+        margin-top: 0.75em;
+        box-shadow:
+            0 4px 8px 0 rgba(0, 0, 0, 0.2),
+            0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
-}
-
-.newsArticle {
-    max-width: 450px;
-    height: 100%;
-    display: grid;
-    animation: transition 1.25s;
-    border-bottom: $Fossil 1px solid;
-    border-top: $Fossil 1px solid;
-    grid-template-columns: repeat(2, auto);
-    column-gap: 2em;
-    font-family: rift-soft, sans-serif;
-    a {
-        text-decoration: none;
-    }
-}
-@keyframes transition {
-    from {
-        opacity: 0;
-        transform: rotateX(-10deg);
-    }
-
-    to {
-        opacity: 1;
-        transform: rotateX(0);
-    }
-}
-
-.hidden {
-    display: none;
-}
-
-.articleContainer {
-    border-bottom: $Fossil 1px solid;
-    border-top: $Fossil 1px solid;
-    padding: 0 1em;
-    max-width: 450px;
-    .articleHeader {
-        text-decoration: none;
-        color: $Onyx;
-        font-weight: 700;
-        font-family: europa, sans-serif;
-        font-size: 15px;
-    }
-    .articleText {
-        text-decoration: none;
-        color: $Slate;
-        font-family: europa, sans-serif;
-        font-size: 14px;
-    }
-}
-
-.newsArticleText {
-    margin: 0;
-}
-
-section a {
-    text-decoration: none;
 }
