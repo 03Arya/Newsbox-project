@@ -5,8 +5,44 @@ $Onyx: #1b1c20;
 $Sage: #87bcbf;
 $Sand: #b9b0a2;
 
+@mixin transition($var) {
+    transition: $var 800ms ease;
+}
+
 body {
     max-width: 450px;
     margin: auto;
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+    @include transition(background-color);
+    @include transition(color);
 }
 
+html {
+    background-color: white;
+    @include transition(background-color);
+}
+
+main {
+    background-color: var(--color-mg);
+    @include transition(background-color);
+}
+
+.settingsFilters {
+    background-color: var(--color-sFilter);
+    @include transition(background-color);
+}
+
+[data-theme="light"] {
+    --color-bg: #ffffff;
+    --color-fg: #1b1c20;
+    --color-mg: #f0f3f4;
+    --color-sFilter: #fff;
+}
+
+[data-theme="dark"] {
+    --color-bg: #324755;
+    --color-fg: #fff;
+    --color-mg: #324755;
+    --color-sFilter: #324755;
+}

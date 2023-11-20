@@ -12,10 +12,13 @@
             if (response.ok) {
                 const articles = data.results.slice(1, 6);
                 const articleContent = articles.map((article, index) => `
-                <a href="${article.url}" target="_blank" class="swipe-article" data-index="${index}">
+                <a href="${article.url}" target="_blank" class="swipe-article" data-content="${article.title} - ${article.abstract} - ${article.multimedia[0].url}">
                     <div class="articleContainer">
+                    <img src="${article.multimedia[0].url}" alt="Article Image" class="articleImage">
+                    <div class="articleTexts">
                         <h3 class="articleHeader">${article.title}</h3>
                         <p class="articleText">${article.abstract}</p>
+                    </div>
                     </div>
                 </a>
             `).join('');
@@ -35,9 +38,9 @@
                         const distX = e.changedTouches[0].clientX - startX;
 
                         // Adjust the threshold based on your needs
-                        if (distX > 50) {
-                            // Swipe right, save to local storage
-                            const articleIndex = article.getAttribute('data-index');
+                        if (distX < 50) {
+                            // Swipe left, save to local storage
+                            const articleIndex = article.getAttribute('data-content');
                             const savedArticles = JSON.parse(localStorage.getItem('savedArticles')) || [];
 
                             // Check if the article is not already in the saved list
@@ -73,19 +76,18 @@
     fetchArticles('travel', '.ArticleTextTravel', '#travelDropdown', 'ArticleTravel');
 
     function clickHandler(dropdownSelector, articleClass) {
-        const DROPDOWN = document.querySelector(dropdownSelector);
+        //const DROPDOWN = document.querySelector(dropdownSelector);
         const ARTICLE = document.querySelector(`.${articleClass}`);
-
         // Toggle visibility of the article
         ARTICLE.classList.toggle("hidden");
 
         // Toggle arrow icon based on the visibility of .newsArticle
         if (ARTICLE.classList.contains("hidden")) {
-            DROPDOWN.classList.remove("fa-chevron-down");
-            DROPDOWN.classList.add("fa-chevron-right");
+            //DROPDOWN.classList.remove("fa-chevron-down");
+            //DROPDOWN.classList.add("fa-chevron-right");
         } else {
-            DROPDOWN.classList.remove("fa-chevron-right");
-            DROPDOWN.classList.add("fa-chevron-down");
+            //DROPDOWN.classList.remove("fa-chevron-right");
+            //DROPDOWN.classList.add("fa-chevron-down");
         }
     }
 
@@ -94,4 +96,5 @@
     document.querySelector('#healthDropdown').addEventListener("click", () => clickHandler('#healthDropdown', 'ArticleHealth'));
     document.querySelector('#sportDropdown').addEventListener("click", () => clickHandler('#sportDropdown', 'ArticleSport'));
     document.querySelector('#travelDropdown').addEventListener("click", () => clickHandler('#travelDropdown', 'ArticleTravel'));
+    
 })();

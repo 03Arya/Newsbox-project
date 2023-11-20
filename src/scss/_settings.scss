@@ -5,10 +5,6 @@ $Onyx: #1b1c20;
 $Sage: #87bcbf;
 $Sand: #b9b0a2;
 
-.settingsMain {
-    background-color: $Ice;
-}
-
 .settingsSection {
     padding-top: 3em;
 }
@@ -43,7 +39,6 @@ $Sand: #b9b0a2;
 }
 
 .settingsFilters {
-    background-color: white;
     max-width: 430px;
     margin: 0 1em;
     margin-top: 5em;
@@ -51,7 +46,6 @@ $Sand: #b9b0a2;
     border: 1px solid white;
     p {
         font-family: europa, sans-serif;
-        color: $Onyx;
         font-weight: 700;
         font-size: 15px;
         margin-top: 1em;

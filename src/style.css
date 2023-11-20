@@ -1,3 +1,7 @@
+body {
+  height: 100vh;
+}
+
 header {
   border-bottom: #c8d1d3 1px solid;
   display: grid;
@@ -29,10 +33,6 @@ header ul {
   justify-content: center;
   column-gap: 7em;
   padding: 0;
-}
-
-.settingsMain {
-  background-color: #f0f3f4;
 }
 
 .settingsSection {
@@ -69,7 +69,6 @@ header ul {
 }
 
 .settingsFilters {
-  background-color: white;
   max-width: 430px;
   margin: 0 1em;
   margin-top: 5em;
@@ -78,7 +77,6 @@ header ul {
 }
 .settingsFilters p {
   font-family: europa, sans-serif;
-  color: #1b1c20;
   font-weight: 700;
   font-size: 15px;
   margin-top: 1em;
@@ -224,6 +222,39 @@ header ul {
 body {
   max-width: 450px;
   margin: auto;
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  transition: background-color 800ms ease;
+  transition: color 800ms ease;
+}
+
+html {
+  background-color: white;
+  transition: background-color 800ms ease;
+}
+
+main {
+  background-color: var(--color-mg);
+  transition: background-color 800ms ease;
+}
+
+.settingsFilters {
+  background-color: var(--color-sFilter);
+  transition: background-color 800ms ease;
+}
+
+[data-theme=light] {
+  --color-bg: #ffffff;
+  --color-fg: #1b1c20;
+  --color-mg: #f0f3f4;
+  --color-sFilter: #fff;
+}
+
+[data-theme=dark] {
+  --color-bg: #324755;
+  --color-fg: #fff;
+  --color-mg: #324755;
+  --color-sFilter: #324755;
 }
 
 .ArticleHealth,
@@ -263,7 +294,12 @@ p {
   border-top: #c8d1d3 1px solid;
   padding: 0 1em;
   max-width: 450px;
-  padding-bottom: 1em;
+  padding-bottom: 0.5em;
+  display: grid;
+  column-gap: 1em;
+  grid-template-columns: repeat(2, auto);
+  height: 130px;
+  max-height: 130px;
 }
 .articleContainer .articleHeader {
   text-decoration: none;
@@ -277,6 +313,17 @@ p {
   color: #6e8ca0;
   font-family: europa, sans-serif;
   font-size: 14px;
+}
+.articleContainer .articleImage {
+  max-width: 100px;
+  max-height: 100px;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  align-self: center;
+}
+.articleContainer .articleTexts {
+  grid-column: 2;
 }
 
 .ArticleText {

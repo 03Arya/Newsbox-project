@@ -3,6 +3,10 @@ $Fossil: #c8d1d3;
 $Ice: #f0f3f4;
 $Onyx: #1B1C20;
 
+body {
+    height: 100vh;
+}
+
 header {
     border-bottom: $Fossil 1px solid;
     display: grid;

@@ -44,7 +44,12 @@ p {
     border-top: $Fossil 1px solid;
     padding: 0 1em;
     max-width: 450px;
-    padding-bottom: 1em;
+    padding-bottom: 0.5em;
+    display: grid;
+    column-gap: 1em;
+    grid-template-columns: repeat(2, auto);
+    height: 130px;
+    max-height: 130px;
     .articleHeader {
         text-decoration: none;
         color: $Onyx;
@@ -57,6 +62,17 @@ p {
         color: $Slate;
         font-family: europa, sans-serif;
         font-size: 14px;
+    }
+    .articleImage {
+        max-width: 100px;
+        max-height: 100px;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        align-self: center;
+    }
+    .articleTexts {
+        grid-column: 2;
     }
 }
 
