@@ -43,7 +43,7 @@ $Sand: #b9b0a2;
     margin: 0 1em;
     margin-top: 5em;
     border-radius: 15px;
-    border: 1px solid white;
+    border: 2px solid;
     p {
         font-family: europa, sans-serif;
         font-weight: 700;
@@ -73,7 +73,6 @@ $Sand: #b9b0a2;
     justify-content: center;
     row-gap: 2em;
     .darkmodeButton button {
-        background-color: $Ice;
         border: 1px solid black;
         border-radius: 25px;
         padding: 1em 2em;

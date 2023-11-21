@@ -10,5 +10,6 @@ import "./scripts/fontawsome"
 
 import "./scripts/darkmode"
 import "./scripts/switch"
-import "./scripts/fetch"
+import "./scripts/index"
 import "./scripts/touch"
+import "./scripts/archive"

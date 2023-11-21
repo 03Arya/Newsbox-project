@@ -9,20 +9,22 @@ $Slate: #6e8ca0;
 .newsNav {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    background-image: linear-gradient(to right, rgb(249, 249, 249), white);
     border-bottom: $Fossil 1px solid;
     border-top: $Fossil 1px solid;
     height: 58px;
     .newsNavDiv {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        column-gap: 1em;
     }
     .newsTitle {
         font-family: europa, sans-serif;
         color: $Onyx;
         font-weight: 700;
-        text-align: center;
+        text-align: start;
         margin-top: 1.25em;
+        max-width: 75px;
+        width: 75px;
     }
     .newsDropdownArrow {
         display: grid;
@@ -36,15 +38,11 @@ $Slate: #6e8ca0;
         align-self: center;
         margin-left: 10em;
     }
-    .newsNavLogo {
-        width: 30px;
-        display: grid;
-        justify-content: center;
-        height: 30px;
-        margin-left: 1em;
-        margin-top: 0.75em;
-        box-shadow:
-            0 4px 8px 0 rgba(0, 0, 0, 0.2),
-            0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
+}
+
+.newsNavDiv svg {
+    align-self: center;
+    margin-left: 2em;
+    border-radius: 50%;
+    padding: 0.5em 0.5em;
 }

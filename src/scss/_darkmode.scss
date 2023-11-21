@@ -4,6 +4,7 @@ $Ice: #f0f3f4;
 $Onyx: #1b1c20;
 $Sage: #87bcbf;
 $Sand: #b9b0a2;
+$Slate: #6e8ca0;
 
 @mixin transition($var) {
     transition: $var 800ms ease;
@@ -31,6 +32,44 @@ main {
 .settingsFilters {
     background-color: var(--color-sFilter);
     @include transition(background-color);
+    border-color: var(--color-sFilterBorder);
+}
+
+a {
+    color: var(--color-linkColor);
+    @include transition(background-color);
+}
+
+button {
+    background-color: var(--color-buttonColor);
+    color: var(--color-fg);
+    @include transition(background-color);
+}
+
+.switch__checkbox:checked + .switch {
+    background-color: var(--color-bgSwitch);
+    @include transition(background-color);
+}
+
+.newsDropdownArrow svg {
+    color: var(--color-dropDownArrow);
+    @include transition(background-color);
+}
+
+.newsNav {
+    background-color: var(--color-newsContainer);
+    @include transition(background-color);
+}
+
+.newsNavDiv svg {
+    background-color: var(--color-newsLogobg);
+    color: var(--color-newsLogo);
+    @include transition(background-color);
+}
+
+.articleText {
+    color: var(--color-articleText);
+    @include transition(background-color);
 }
 
 [data-theme="light"] {
@@ -38,6 +77,15 @@ main {
     --color-fg: #1b1c20;
     --color-mg: #f0f3f4;
     --color-sFilter: #fff;
+    --color-linkColor: #1b1c20;
+    --color-buttonColor: #f0f3f4;
+    --color-sFilterBorder: #fff;
+    --color-bgSwitch: #87bcbf;
+    --color-dropDownArrow: #1b1c20;
+    --color-newsContainer: #fff;
+    --color-newsLogobg: #fff;
+    --color-newsLogo: #ffa500;
+    --color-articleText:#6E8CA0;
 }
 
 [data-theme="dark"] {
@@ -45,4 +93,13 @@ main {
     --color-fg: #fff;
     --color-mg: #324755;
     --color-sFilter: #324755;
+    --color-linkColor: #000;
+    --color-buttonColor: #324755;
+    --color-sFilterBorder: #000;
+    --color-bgSwitch: #d95454;
+    --color-dropDownArrow: #1b1c20;
+    --color-newsContainer: #324755;
+    --color-newsLogobg: #324755;
+    --color-newsLogo: #87bcbf;
+    --color-articleText: #fff;
 }
