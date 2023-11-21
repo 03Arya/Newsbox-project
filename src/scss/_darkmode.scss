@@ -16,7 +16,13 @@ body {
     background-color: var(--color-bg);
     color: var(--color-fg);
     @include transition(background-color);
-    @include transition(color);
+    @include transition(color);    
+    @include transition(border-color);
+}
+
+header {
+    background-color: var(--color-bg);   
+    @include transition(background-color);
 }
 
 html {
@@ -33,6 +39,7 @@ main {
     background-color: var(--color-sFilter);
     @include transition(background-color);
     border-color: var(--color-sFilterBorder);
+    @include transition(border-color);
 }
 
 a {

@@ -1,4 +1,12 @@
 (function () {
+    const hasVisitedBefore = localStorage.getItem("hasVisitedBefore");
+
+    // If not visited before, set the theme to light mode
+    if (!hasVisitedBefore) {
+        localStorage.setItem("theme", "light");
+        localStorage.setItem("hasVisitedBefore", true);
+    }
+
     if (!window.location.pathname.includes("index.html")) return; // guard clause
 
     const apiKey = 'R6JswxR2AtoZ4AIEMyGPr0Z4oGATvNsL';
