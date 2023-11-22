@@ -38,4 +38,52 @@ export default (function () {
     */
     updateButton({ buttonEl: button, isDark: currentThemeSetting === "dark" });
     updateThemeOnBody({ theme: currentThemeSetting });
+
+    function displaySavedArticles() {
+        const savedArticles = JSON.parse(localStorage.getItem('savedArticles')) || [];
+
+        savedArticles.forEach((articleIndex) => {
+            const [title, abstract, imageUrl] = articleIndex.split(' - ');
+
+            const savedArticleHTML = `
+                <div class="articleContainer">
+                    <img src="${imageUrl}" alt="Article Image" class="articleImage">
+                    <div class="articleTexts">
+                        <h3 class="articleHeader">${title}</h3>
+                        <p class="articleText">${abstract}</p>
+                    </div>
+                </div>
+            `;
+
+            // Determine the section based on the article title
+            const sectionSelector = determineSectionSelector(title);
+
+            // Append the saved article to the respective section
+            const section = document.querySelector(sectionSelector);
+            section.innerHTML += savedArticleHTML;
+        });
+    }
+
+    // Function to determine the section selector based on the article title
+    function determineSectionSelector(title) {
+        const sectionMap = {
+            'Health': '.ArticleTextHealth',
+            'Travel': '.ArticleTextTravel',
+            'Sport': '.ArticleTextSport',
+            'Europe': '.ArticleTextEurope',
+            'Business': '.ArticleTextBusiness',
+        };
+
+        for (const [section, selector] of Object.entries(sectionMap)) {
+            if (title.toLowerCase().includes(section.toLowerCase())) {
+                return selector;
+            }
+        }
+
+        // Default to the health section if no match is found
+        return '.ArticleTextHealth';
+    }
+
+    // Call the function to display saved articles when the page loads
+    displaySavedArticles();
 })()

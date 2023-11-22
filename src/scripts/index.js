@@ -9,6 +9,7 @@
 
     if (!window.location.pathname.includes("index.html")) return; // guard clause
 
+
     const apiKey = 'R6JswxR2AtoZ4AIEMyGPr0Z4oGATvNsL';
 
     // Function to fetch articles
@@ -85,29 +86,9 @@
     // Fetch articles for Travel
     fetchArticles('travel', '.ArticleTextTravel', '#travelDropdown', 'ArticleTravel');
 
-    function clickHandler(dropdownSelector, articleClass) {
-        //const DROPDOWN = document.querySelector(dropdownSelector);
-        const ARTICLE = document.querySelector(`.${articleClass}`);
-        // Toggle visibility of the article
-        ARTICLE.classList.toggle("hidden");
 
-        // Toggle arrow icon based on the visibility of .newsArticle
-        if (ARTICLE.classList.contains("hidden")) {
-            //DROPDOWN.classList.remove("fa-chevron-down");
-            //DROPDOWN.classList.add("fa-chevron-right");
-        } else {
-            //DROPDOWN.classList.remove("fa-chevron-right");
-            //DROPDOWN.classList.add("fa-chevron-down");
-        }
-    }
 
-    // Add click event listeners for each dropdown
-    document.querySelector('#businessDropdown').addEventListener("click", () => clickHandler('#businessDropdown', 'ArticleBusiness'));
-    document.querySelector('#healthDropdown').addEventListener("click", () => clickHandler('#healthDropdown', 'ArticleHealth'));
-    document.querySelector('#sportDropdown').addEventListener("click", () => clickHandler('#sportDropdown', 'ArticleSport'));
-    document.querySelector('#travelDropdown').addEventListener("click", () => clickHandler('#travelDropdown', 'ArticleTravel'));
-    document.querySelector('#europeDropdown').addEventListener("click", () => clickHandler('#europeDropdown', 'ArticleEurope'));
-
+    //DarkMode for Index
     function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark }) {
         if (localStorageTheme !== null) {
             return localStorageTheme;
@@ -146,40 +127,4 @@
     updateButton({ buttonEl: button, isDark: currentThemeSetting === "dark" });
     updateThemeOnBody({ theme: currentThemeSetting });
 
-
-    function hideCategory() {
-        var switchHealth = localStorage.getItem("switchHealth");
-
-        if (switchHealth === "false") {
-            document.querySelector("#healthArticle").style.display = "none";
-        }
-
-        var switchHealth = localStorage.getItem("switchTravel");
-
-        if (switchHealth === "false") {
-            document.querySelector("#travelArticle").style.display = "none";
-        }
-
-        var switchSport = localStorage.getItem("switchSport");
-
-        if (switchSport === "false") {
-            document.querySelector("#sportArticle").style.display = "none";
-        }
-
-        var switchEurope = localStorage.getItem("switchEurope");
-
-        if (switchEurope === "false") {
-            document.querySelector("#europeArticle").style.display = "none";
-        }
-
-        var switchBusiness = localStorage.getItem("switchBusiness");
-
-        if (switchBusiness === "false") {
-            document.querySelector("#businessArticle").style.display = "none";
-        }
-
-    }
-
-    // Call the hideCategory function when the page loads
-    document.addEventListener("DOMContentLoaded", hideCategory);
 })();
