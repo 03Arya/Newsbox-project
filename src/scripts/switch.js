@@ -1,5 +1,5 @@
 export default (function () {
-    if (!window.location.pathname.includes("settings.html")) return; // guard clause
+    if (!window.location.pathname.includes("settings")) return; // guard clause
 
     // Get all checkboxes
     const checkboxes = document.querySelectorAll(".switch__checkbox");

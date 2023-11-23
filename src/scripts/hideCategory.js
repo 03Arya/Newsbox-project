@@ -1,4 +1,4 @@
-if (!window.location.pathname.includes("index.html")) return; // guard clause
+if (!window.location.pathname.includes("index.html") && window.location.pathname !== "/") return; // guard clause
 
 function hideCategory() {
     var switchHealth = localStorage.getItem("switchHealth");

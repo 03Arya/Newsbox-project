@@ -1,5 +1,5 @@
 export default (function () {
-    if (!window.location.pathname.includes("archive.html")) return; // guard clause
+    if (!window.location.pathname.includes("archive")) return; // guard clause
 
     function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark }) {
         if (localStorageTheme !== null) {

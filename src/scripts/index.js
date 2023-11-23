@@ -7,7 +7,7 @@
         localStorage.setItem("hasVisitedBefore", true);
     }
 
-    if (!window.location.pathname.includes("index.html")) return; // guard clause
+    if (!window.location.pathname.includes("index.html") && window.location.pathname !== "/") return; // guard clause
 
 
     const apiKey = 'R6JswxR2AtoZ4AIEMyGPr0Z4oGATvNsL';

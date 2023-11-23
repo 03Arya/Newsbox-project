@@ -1,4 +1,4 @@
-if (window.location.pathname.includes("settings.html")) return; // guard clause
+if (window.location.pathname.includes("settings")) return; // guard clause
 
 
 function clickHandler(dropdownSelector, articleClass) {
