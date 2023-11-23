@@ -13,13 +13,13 @@
     const apiKey = 'R6JswxR2AtoZ4AIEMyGPr0Z4oGATvNsL';
 
     // Function to fetch articles
-    async function fetchArticles(endpoint, containerSelector, dropdownSelector, articleClass) {
+    async function fetchArticles(endpoint, containerSelector, dropdownSelector, articleClass, category) {
         try {
             const response = await fetch(`https://api.nytimes.com/svc/topstories/v2/${endpoint}.json?api-key=${apiKey}`);
             const data = await response.json();
 
             if (response.ok) {
-                const articles = data.results.slice(1, 6);
+                const articles = data.results.slice(1, 11);
                 const articleContent = articles.map((article, index) => `
                 <a href="${article.url}" target="_blank" class="swipe-article" data-content="${article.title} - ${article.abstract} - ${article.multimedia[0].url}">
                     <div class="articleContainer">
@@ -50,11 +50,15 @@
                         if (distX < 50) {
                             // Swipe left, save to local storage
                             const articleIndex = article.getAttribute('data-content');
-                            const savedArticles = JSON.parse(localStorage.getItem('savedArticles')) || [];
+                            const savedArticles = JSON.parse(localStorage.getItem('savedArticles')) || {};
+
+                            if (!savedArticles.hasOwnProperty(category)) {
+                                savedArticles[category] = [];
+                            }
 
                             // Check if the article is not already in the saved list
-                            if (!savedArticles.includes(articleIndex)) {
-                                savedArticles.push(articleIndex);
+                            if (!savedArticles[category].includes(articleIndex)) {
+                                savedArticles[category].push(articleIndex);
                                 localStorage.setItem('savedArticles', JSON.stringify(savedArticles));
                                 alert('Article saved to local storage!');
                             }
@@ -72,21 +76,19 @@
     }
 
     // Fetch articles for Business
-    fetchArticles('business', '.ArticleTextBusiness', '#businessDropdown', 'ArticleBusiness');
+    fetchArticles('business', '.ArticleTextBusiness', '#businessDropdown', 'ArticleBusiness', 'business');
 
     // Fetch articles for Health
-    fetchArticles('health', '.ArticleTextHealth', '#healthDropdown', 'ArticleHealth');
+    fetchArticles('health', '.ArticleTextHealth', '#healthDropdown', 'ArticleHealth', 'health');
 
     // Fetch articles for Sports
-    fetchArticles('sports', '.ArticleTextSport', '#sportDropdown', 'ArticleSport');
+    fetchArticles('sports', '.ArticleTextSport', '#sportDropdown', 'ArticleSport', 'sports');
 
     // Fetch articles for Europe
-    fetchArticles('world/europe', '.ArticleTextEurope', '#europeDropdown', 'ArticleEurope');
+    fetchArticles('world/europe', '.ArticleTextEurope', '#europeDropdown', 'ArticleEurope', 'europe');
 
     // Fetch articles for Travel
-    fetchArticles('travel', '.ArticleTextTravel', '#travelDropdown', 'ArticleTravel');
-
-
+    fetchArticles('travel', '.ArticleTextTravel', '#travelDropdown', 'ArticleTravel', 'travel');
 
     //DarkMode for Index
     function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark }) {

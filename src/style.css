@@ -131,6 +131,8 @@ header ul {
   border: 0px solid;
   background-color: #f0f3f4;
   color: #1B1C20;
+  justify-content: end;
+  display: grid;
 }
 
 .switch {
@@ -206,6 +208,7 @@ header ul {
   margin-left: 2em;
   border-radius: 50%;
   padding: 0.5em 0.5em;
+  border: 2px solid;
 }
 
 body {
@@ -215,6 +218,12 @@ body {
   color: var(--color-fg);
   transition: background-color 800ms ease;
   transition: color 800ms ease;
+  transition: border-color 800ms ease;
+}
+
+header {
+  background-color: var(--color-bg);
+  transition: background-color 800ms ease;
 }
 
 html {
@@ -231,6 +240,7 @@ main {
   background-color: var(--color-sFilter);
   transition: background-color 800ms ease;
   border-color: var(--color-sFilterBorder);
+  transition: border-color 800ms ease;
 }
 
 a {
@@ -260,7 +270,7 @@ button {
 }
 
 .newsNavDiv svg {
-  background-color: var(--color-newsLogobg);
+  border-color: var(--color-newsLogoBorder);
   color: var(--color-newsLogo);
   transition: background-color 800ms ease;
 }
@@ -281,7 +291,7 @@ button {
   --color-bgSwitch: #87bcbf;
   --color-dropDownArrow: #1b1c20;
   --color-newsContainer: #fff;
-  --color-newsLogobg: #fff;
+  --color-newsLogoBorder: #000;
   --color-newsLogo: #ffa500;
   --color-articleText:#6E8CA0;
 }
@@ -297,7 +307,7 @@ button {
   --color-bgSwitch: #d95454;
   --color-dropDownArrow: #1b1c20;
   --color-newsContainer: #324755;
-  --color-newsLogobg: #324755;
+  --color-newsLogoBorder: #6e8ca0;
   --color-newsLogo: #87bcbf;
   --color-articleText: #fff;
 }
@@ -356,11 +366,11 @@ p {
   font-size: 14px;
 }
 .articleContainer .articleImage {
-  max-width: 125px;
-  max-height: 125px;
+  max-width: 100px;
+  max-height: 100px;
   border-radius: 50%;
-  width: 125px;
-  height: 125px;
+  width: 100px;
+  height: 100px;
   align-self: center;
 }
 .articleContainer .articleTexts {

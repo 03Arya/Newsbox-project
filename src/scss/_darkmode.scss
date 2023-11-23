@@ -69,7 +69,7 @@ button {
 }
 
 .newsNavDiv svg {
-    background-color: var(--color-newsLogobg);
+    border-color: var(--color-newsLogoBorder);
     color: var(--color-newsLogo);
     @include transition(background-color);
 }
@@ -90,7 +90,7 @@ button {
     --color-bgSwitch: #87bcbf;
     --color-dropDownArrow: #1b1c20;
     --color-newsContainer: #fff;
-    --color-newsLogobg: #fff;
+    --color-newsLogoBorder: #000;
     --color-newsLogo: #ffa500;
     --color-articleText:#6E8CA0;
 }
@@ -106,7 +106,7 @@ button {
     --color-bgSwitch: #d95454;
     --color-dropDownArrow: #1b1c20;
     --color-newsContainer: #324755;
-    --color-newsLogobg: #324755;
+    --color-newsLogoBorder: #6e8ca0;
     --color-newsLogo: #87bcbf;
     --color-articleText: #fff;
 }

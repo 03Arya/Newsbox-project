@@ -34,13 +34,22 @@ export default (function () {
     let currentThemeSetting = calculateSettingAsThemeString({ localStorageTheme, systemSettingDark });
 
     /**
-    * 3. Update the theme setting and button text accoridng to current settings
+    * 3. Update the theme setting and button text according to current settings
     */
     updateButton({ buttonEl: button, isDark: currentThemeSetting === "dark" });
     updateThemeOnBody({ theme: currentThemeSetting });
 
     function displaySavedArticles() {
         const savedArticles = JSON.parse(localStorage.getItem('savedArticles')) || [];
+        console.log(savedArticles)
+        // Use a map to pre-calculate the section for each article
+        const sectionMap = {
+            'Health': '.ArticleTextHealth',
+            'Travel': '.ArticleTextTravel',
+            'Sport': '.ArticleTextSport',
+            'Europe': '.ArticleTextEurope',
+            'Business': '.ArticleTextBusiness',
+        };
 
         savedArticles.forEach((articleIndex) => {
             const [title, abstract, imageUrl] = articleIndex.split(' - ');
@@ -56,7 +65,7 @@ export default (function () {
             `;
 
             // Determine the section based on the article title
-            const sectionSelector = determineSectionSelector(title);
+            const sectionSelector = determineSectionSelector(title, sectionMap);
 
             // Append the saved article to the respective section
             const section = document.querySelector(sectionSelector);
@@ -65,15 +74,7 @@ export default (function () {
     }
 
     // Function to determine the section selector based on the article title
-    function determineSectionSelector(title) {
-        const sectionMap = {
-            'Health': '.ArticleTextHealth',
-            'Travel': '.ArticleTextTravel',
-            'Sport': '.ArticleTextSport',
-            'Europe': '.ArticleTextEurope',
-            'Business': '.ArticleTextBusiness',
-        };
-
+    function determineSectionSelector(title, sectionMap) {
         for (const [section, selector] of Object.entries(sectionMap)) {
             if (title.toLowerCase().includes(section.toLowerCase())) {
                 return selector;
@@ -83,7 +84,6 @@ export default (function () {
         // Default to the health section if no match is found
         return '.ArticleTextHealth';
     }
-
     // Call the function to display saved articles when the page loads
     displaySavedArticles();
-})()
+})();
